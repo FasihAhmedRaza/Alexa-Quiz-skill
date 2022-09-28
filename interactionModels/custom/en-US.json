@@ -1,0 +1,234 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "new quiz skill",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "HelloWorldIntent",
+          "slots": [],
+          "samples": [
+            "hello",
+            "how are you",
+            "say hi world",
+            "say hi",
+            "hi",
+            "say hello world",
+            "say hello"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "ShowQuiz",
+          "slots": [
+            {
+              "name": "questionOne",
+              "type": "qOne",
+              "samples": [
+                "{questionOne}",
+                "answer is {questionOne}"
+              ]
+            },
+            {
+              "name": "questionTwo",
+              "type": "qTwo",
+              "samples": [
+                "{questionTwo}",
+                "answer is {questionTwo}"
+              ]
+            },
+            {
+              "name": "questionThree",
+              "type": "qThree",
+              "samples": [
+                "{questionThree}",
+                "answer is {questionThree}"
+              ]
+            }
+          ],
+          "samples": [
+            "start quiz",
+            "begin",
+            "start"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "karachi",
+                "synonyms": [
+                  "karachi"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "lahore",
+                "synonyms": [
+                  "lahore"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "islamabad",
+                "synonyms": [
+                  "islamabad"
+                ]
+              }
+            }
+          ],
+          "name": "qOne"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "mexico city",
+                "synonyms": [
+                  "mexico city"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Merida",
+                "synonyms": [
+                  "Merida"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Cancun",
+                "synonyms": [
+                  "Cancun"
+                ]
+              }
+            }
+          ],
+          "name": "qTwo"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "Rome",
+                "synonyms": [
+                  "Rome"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Bari",
+                "synonyms": [
+                  "Bari"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "Milan",
+                "synonyms": [
+                  "Milan"
+                ]
+              }
+            }
+          ],
+          "name": "qThree"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "ShowQuiz",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "questionOne",
+              "type": "qOne",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.36872489230.480328414500"
+              }
+            },
+            {
+              "name": "questionTwo",
+              "type": "qTwo",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.36872489230.86001024081"
+              }
+            },
+            {
+              "name": "questionThree",
+              "type": "qThree",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.36872489230.417475426185"
+              }
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.36872489230.480328414500",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the capital of pakistan . ..  Options  are  .  islamabad  . karachi  . lahore  "
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.36872489230.86001024081",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": " What is the capital of Mexico ....  Options are ...       mexico city   , Merida   , Cancun  "
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.36872489230.417475426185",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "What is the capital of italy ...    Options are .....     Rome ,  Bari  , Milan  "
+          }
+        ]
+      }
+    ]
+  },
+  "version": "5"
+}
